@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#title{
+    font-family: 'Nabla', cursive;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+tr {
+    height: 30px;
+    cursor: pointer;
+}
+
+td {
+    width: 30px;
+}
