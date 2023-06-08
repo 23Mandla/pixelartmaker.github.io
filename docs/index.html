@@ -10,66 +10,88 @@
       href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/9f76f12f76.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="output.css" />
     <script src="script.js" defer></script>
     <title>Pixel art maker</title>
   </head>
-  <body>
-    <main class="w-full h-screen bg-slate-800 overflow-hidden">
-      <header class="p-2 bg-slate-950">
-        <h1 class="text-[5em] text-center" id="title">Create Pixel art</h1>
+  <body class="bg-slate-800 pb-5">
+    <main>
+      <header class="flex items-center justify-center p-2 bg-slate-950">
+        <h1 class="text-[5em]" id="title">Create Pixel art</h1>
+        <a
+          href="https://github.com/23Mandla/pixelartmaker.github.io"
+          class="bg-gray-700 ml-80 h-12 w-24 rounded flex justify-center items-center transition-colors duration-500 hover:bg-gray-900"
+          ><i class="fa-brands fa-github text-4xl text-gray-400"></i
+        ></a>
       </header>
 
-      <div class="mt-6 flex flex-col items-center space-y-8">
-        <h1 class="text-white text-2xl">Choose a grid size</h1>
-        <form action="">
-          <div class="flex space-x-14">
-            <div>
-              <label for="inputHeight" class="text-white block mb-2"
-                >Grid Height</label
-              >
-              <input
-                type="number"
-                id="inputHeight"
-                name="height"
-                min="1"
-                value="1"
-                class="w-[6em] text-center rounded-lg border border-gray-300 p-1 bg-transparent text-white"
-              />
-            </div>
+      <div class="grid grid-flow-col gap-5 mt-14 p-1">
+        <div class="space-y-8">
+          <div class="text-center">
+            <h1 class="text-white text-2xl">Choose a grid size</h1>
+          </div>
+          <div class="flex justify-center">
+            <form action="">
+              <div class="flex space-x-14">
+                <div>
+                  <label for="inputHeight" class="text-white block mb-2"
+                    >Grid Height</label
+                  >
+                  <input
+                    type="number"
+                    id="inputHeight"
+                    name="height"
+                    min="1"
+                    value="1"
+                    class="w-[6em] text-center rounded-lg border border-gray-300 p-1 bg-transparent text-white"
+                  />
+                </div>
 
-            <div>
-              <label for="inputWidth" class="text-white block mb-2"
-                >Grid Width</label
-              >
-              <input
-                type="number"
-                id="inputWidth"
-                name="height"
-                min="1"
-                value="1"
-                class="w-[6em] text-center rounded-lg border border-gray-300 p-1 bg-transparent text-white"
-              />
-            </div>
+                <div>
+                  <label for="inputWidth" class="text-white block mb-2"
+                    >Grid Width</label
+                  >
+                  <input
+                    type="number"
+                    id="inputWidth"
+                    name="height"
+                    min="1"
+                    value="1"
+                    class="w-[6em] text-center rounded-lg border border-gray-300 p-1 bg-transparent text-white"
+                  />
+                </div>
+              </div>
+              <div class="mt-6 pl-16">
+                <button
+                  class="text-white border border-orange-500 p-1 w-24 rounded hover:bg-cyan-500 text-lg"
+                  id="size"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="flex items-center mt-6">
-            <button
-              class="text-white m-auto border border-orange-500 p-1 w-24 rounded hover:bg-cyan-500 text-lg"
-              id="size"
-            >
-              Submit
-            </button>
+        </div>
+
+        <div class="flex justify-center">
+          <div>
+            <h2 class="text-rose-500">Pick a Color</h2>
+            <input
+              type="color"
+              id="colorPicker"
+              class="w-36 h-28 cursor-pointer"
+            />
           </div>
-        </form>
+        </div>
       </div>
-      <div class="flex flex-col items-center mt-10">
+
+      <div class="flex flex-col items-center mt-5">
         <h2 class="text-white text-xl mb-3">Design Canvas</h2>
         <table id="pixelCanvas" class="m-auto border-collapse"></table>
-      </div>
-
-      <div class="absolute right-44 top-64">
-        <h2 class="text-rose-500">Pick a Color</h2>
-        <input type="color" id="colorPicker" class="w-36 h-28 cursor-pointer" />
       </div>
     </main>
   </body>
