@@ -1,3 +1,3 @@
 # Pixel art maker
 
-Here click here for the demo
+This was one of the udacity projects, I decided to play around with it.
